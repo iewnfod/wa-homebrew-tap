@@ -8,14 +8,14 @@ Auto release Homebrew Taps by GoReleaser reference this [document](https://gorel
 
 ```
 brew tap wa-lang/tap
-brew install walang
+brew install wa
 ```
 
 ## Formulae
 
 | Repository | Formula | Description |
 | ---------- | ------- | ----------- |
-| [Wa(凹语言)](https://github.com/wa-lang/wa) | [formula](HomebrewFormula/walang.rb) | The Wa Programming Language |
+| [Wa(凹语言)](https://github.com/wa-lang/wa) | [formula](HomebrewFormula/wa.rb) | The Wa Programming Language |
 
 ## Documentation
 
