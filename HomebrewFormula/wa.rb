@@ -5,21 +5,21 @@
 class Wa < Formula
   desc "The Wa Programming Language"
   homepage "https://github.com/wa-lang/wa"
-  version "0.6.0"
-  license "AGPL-v3 License"
+  version "0.8.0-test1"
+  license "AGPL-3.0 license"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/wa-lang/wa/releases/download/v0.6.0/wa_0.6.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "2efb26b5e85fa16f14976c19eab009fe5904d8ce80721ada122288c42871e4a8"
+    if Hardware::CPU.arm?
+      url "https://github.com/wa-lang/wa/releases/download/v0.8.0-test1/wa_0.8.0-test1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "0e1cd10a0dfe9f745e8ad55413de7629a6d91297d780fac9d51c5204063edb0c"
 
       def install
         bin.install "wa"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/wa-lang/wa/releases/download/v0.6.0/wa_0.6.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8804609999eb11b32d49a53f22e11dc8f858dc80432cfe196040374ec48192b0"
+    if Hardware::CPU.intel?
+      url "https://github.com/wa-lang/wa/releases/download/v0.8.0-test1/wa_0.8.0-test1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "b6a2108b2653ed4a7e6c5a8e890c560659d34510860b6f234a6da07db85de278"
 
       def install
         bin.install "wa"
@@ -29,16 +29,8 @@ class Wa < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/wa-lang/wa/releases/download/v0.6.0/wa_0.6.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "22ed3ff7aefd8fa4bb41b21a2c067745183221c1c279e78e2b2280be4a11de63"
-
-      def install
-        bin.install "wa"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wa-lang/wa/releases/download/v0.6.0/wa_0.6.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "f60054b258bf107de11b7d9dfd495b209bcbf33a3a9b972afd1f1e51f1874b7d"
+      url "https://github.com/wa-lang/wa/releases/download/v0.8.0-test1/wa_0.8.0-test1_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "464616f538f98aeddc77d4f19f818e4b0b7835b1f0e2f46c450a617f3bfadcb8"
 
       def install
         bin.install "wa"
@@ -47,6 +39,6 @@ class Wa < Formula
   end
 
   test do
-    system "#{bin}/wa -v"
+    system "#{bin}/wa"
   end
 end
