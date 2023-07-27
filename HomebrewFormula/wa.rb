@@ -9,17 +9,17 @@ class Wa < Formula
   license "AGPL-3.0 license"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/wa-lang/wa/releases/download/v0.8.0-test1/wa_0.8.0-test1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0e1cd10a0dfe9f745e8ad55413de7629a6d91297d780fac9d51c5204063edb0c"
+    if Hardware::CPU.intel?
+      url "https://github.com/wa-lang/wa/releases/download/v0.8.0-test1/wa_0.8.0-test1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "94d3de9d23307f058633635d818a1cdc20fdb15b58fc9ff2e938f099d22dd8f3"
 
       def install
         bin.install "wa"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wa-lang/wa/releases/download/v0.8.0-test1/wa_0.8.0-test1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b6a2108b2653ed4a7e6c5a8e890c560659d34510860b6f234a6da07db85de278"
+    if Hardware::CPU.arm?
+      url "https://github.com/wa-lang/wa/releases/download/v0.8.0-test1/wa_0.8.0-test1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f23a9d8a931ad2c9f6670e486dee80d25d7dbbbe8059a63de285a8c394a951fb"
 
       def install
         bin.install "wa"
@@ -30,7 +30,7 @@ class Wa < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/wa-lang/wa/releases/download/v0.8.0-test1/wa_0.8.0-test1_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "464616f538f98aeddc77d4f19f818e4b0b7835b1f0e2f46c450a617f3bfadcb8"
+      sha256 "3f5ca4b72faa5bbcce622709d82d8f2320ba0eb5511d4f65c47e8e0e1c9fc94a"
 
       def install
         bin.install "wa"
