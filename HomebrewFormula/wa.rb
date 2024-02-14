@@ -5,21 +5,21 @@
 class Wa < Formula
   desc "The Wa Programming Language"
   homepage "https://github.com/wa-lang/wa"
-  version "0.9.0"
+  version "0.9.1"
   license "AGPL-3.0 license"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/wa-lang/wa/releases/download/v0.9.0/wa_0.9.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "72a7d3d0821ee22b25ecefce38bcc278ac4e55b79ece343c81194e421fae96f6"
+      url "https://github.com/wa-lang/wa/releases/download/v0.9.1/wa_0.9.1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8cecd5532d13617e16200627e977ce2641c5fd09ed0d1eb43d8d4c2dc3468544"
 
       def install
         bin.install "wa"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wa-lang/wa/releases/download/v0.9.0/wa_0.9.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0fe3c88924f74db83308066c3d177ceca65c8f9b37bbc4a0f55e20b565666970"
+      url "https://github.com/wa-lang/wa/releases/download/v0.9.1/wa_0.9.1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "0a397f375e18a53ebb16a441c3335204264995bd833985264401c123547090a4"
 
       def install
         bin.install "wa"
@@ -29,8 +29,8 @@ class Wa < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/wa-lang/wa/releases/download/v0.9.0/wa_0.9.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "80173b34510859982d4f1a6b24f6259dbf2490fa90f2436c16f071e593655c03"
+      url "https://github.com/wa-lang/wa/releases/download/v0.9.1/wa_0.9.1_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8b9cd9d0aefcbf236ffeb5727c3559042b7407686ec645d4378c3e926e94777c"
 
       def install
         bin.install "wa"
